@@ -2,6 +2,13 @@
 
 # quick hack to automate local user bleeding-edge chromium build installs
 
+# NOTE: over time this script will build up a directory collection of
+# old installs in ~/$APPNAME. This is by design so you can easily
+# roll back to a previous install by changing the symbolic link
+# to /usr/local/bin. After awhile you might want to delete some of the
+# old directories.
+
+
 # how do you like to call this program? (chrome-linux, chrome, chromium, google-chrome?)
 APPNAME="chromium"
 # get the latest build number (JSON)
