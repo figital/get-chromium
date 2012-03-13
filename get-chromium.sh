@@ -8,16 +8,15 @@
 # to /usr/local/bin. After awhile you might want to delete some of the
 # old directories.
 
-
 # how do you like to call this program? (chrome-linux, chrome, chromium, google-chrome?)
 APPNAME="chromium"
 # get the latest build number (JSON)
-VERSION=$(wget -qO- http://build.chromium.org/f/chromium/snapshots/chromium-linux-reliability/LATEST)
+VERSION=$(wget -qO- http://commondatastorage.googleapis.com/chromium-browser-continuous/Linux/LAST_CHANGE)
 # get some extra metadata to display on the command line
-LOGURL="http://build.chromium.org/f/chromium/snapshots/chromium-linux-reliability/"$VERSION"/REVISIONS"
+LOGURL="http://commondatastorage.googleapis.com/chromium-browser-continuous/Linux/"$VERSION"/REVISIONS"
 LOG=$(wget -qO- $LOGURL)
 # build the URL of the file we'll be downloading
-DOWNLOADURL="http://build.chromium.org/f/chromium/snapshots/chromium-linux-reliability/"$VERSION"/chrome-linux.zip"
+DOWNLOADURL="http://commondatastorage.googleapis.com/chromium-browser-continuous/Linux/"$VERSION"/chrome-linux.zip"
 
 
 
